@@ -9,7 +9,7 @@
 ### Master Boot Record
  - Enthält das Startprogramm und die Partitionstabelle
  - Liegt im Track 0 Side 0 Sector 0
- - Am ende muss 0x55AA stehe
+ - Am ende muss 0x55AA stehe<br/>
 Der Speicheraufbaue der MBR ist wie folgt 
 
 | Stage 1 Bootloader | Master Partition Enty 0 | Master Partition Enty 1 | Master Partition Enty n | Magic number |
