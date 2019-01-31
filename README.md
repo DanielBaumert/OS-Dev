@@ -85,3 +85,11 @@ Der Speicheraufbaue der MBR ist wie folgt
 |    h     | Lesekopfnummer                                                       |
 |    S     | Zahl der Sektoren (= Zahö der Blöcke je Zylinderkopfspur  bzw. Tack) |
 |    s     | Sektornummer                                                         |
+
+
+Links: 
+https://de.wikipedia.org/wiki/Master_Boot_Record
+https://de.wikipedia.org/wiki/Cylinder_Head_Sector
+https://de.wikipedia.org/wiki/Partitionstabelle
+https://de.wikipedia.org/wiki/GUID_Partition_Table
+
