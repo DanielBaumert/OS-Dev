@@ -82,7 +82,7 @@ Der Speicheraufbaue der MBR ist wie folgt
 
 Beispiel:
 <table>
-   <tr>
+   <tr align="center">
       <td>Offset</td>
       <td>*0</td> 
       <td>*1</td> 
@@ -104,7 +104,7 @@ Beispiel:
    <tr>
       <td  align="center" colspan="17">.  .  .</td>
    </tr>
-   <tr>
+   <tr align="center">
       <td>0x01b0</td>
       <td>0x00</td> 
       <td>0x00</td> 
@@ -123,7 +123,7 @@ Beispiel:
       <td style="background-color: #1E90FF; color: white">0x00</td> 
       <td style="background-color: #1E90FF; color: white">0x01</td>
    </tr>
-   <tr>
+   <tr align="center">
       <td>0x01c0</td>
       <td style="background-color: #1E90FF; color: white">0x01</td> 
       <td style="background-color: #1E90FF; color: white">0x00</td> 
@@ -142,10 +142,10 @@ Beispiel:
       <td>0x00</td> 
       <td>0xfe</td>
    </tr>
-   <tr>
+   <tr align="center">
       <td align="center" colspan="17">.  .  .</td>
    </tr>
-   <tr>
+   <tr align="center">
       <td>0x01e0</td>
       <td style="background-color: orange; color: white">0xff</td> 
       <td style="background-color: orange; color: white">0xff</td> 
@@ -164,7 +164,7 @@ Beispiel:
       <td style="background-color: #1E90FF; color: white">0x80</td> 
       <td style="background-color: #1E90FF; color: white">0xfe</td>
    </tr>
-   <tr>
+   <tr align="center">
       <td>0x01f0</td>
       <td style="background-color: #1E90FF; color: white">0xff</td> 
       <td style="background-color: #1E90FF; color: white">0xff</td> 
