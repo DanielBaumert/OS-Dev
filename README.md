@@ -84,22 +84,22 @@ Beispiel:
 <table>
    <tr align="center">
       <td>Offset</td>
-      <td>*0</td> 
-      <td>*1</td> 
-      <td>*2</td> 
-      <td>*3</td> 
-      <td>*4</td> 
-      <td>*5</td> 
-      <td>*6</td> 
-      <td>*7</td> 
-      <td>*8</td> 
-      <td>*9</td> 
-      <td>*A</td> 
-      <td>*B</td> 
-      <td>*C</td> 
-      <td>*D</td> 
-      <td>*E</td> 
-      <td>*F</td>
+      <td>0x00</td> 
+      <td>0x01</td> 
+      <td>0x02</td> 
+      <td>0x03</td> 
+      <td>0x04</td> 
+      <td>0x05</td> 
+      <td>0x06</td> 
+      <td>0x07</td> 
+      <td>0x08</td> 
+      <td>0x09</td> 
+      <td>0x0A</td> 
+      <td>0x0B</td> 
+      <td>0x0C</td> 
+      <td>0x0D</td> 
+      <td>0x0E</td> 
+      <td>0x0F</td>
    </tr>
    <tr>
       <td  align="center" colspan="17">.  .  .</td>
@@ -227,4 +227,3 @@ https://de.wikipedia.org/wiki/Master_Boot_Record<br/>
 https://de.wikipedia.org/wiki/Cylinder_Head_Sector<br/>
 https://de.wikipedia.org/wiki/Partitionstabelle<br/>
 https://de.wikipedia.org/wiki/GUID_Partition_Table<br/>
-
