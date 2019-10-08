@@ -204,9 +204,6 @@ Beispiel:
 
 ##### CHS (Cylinder/Head/Sector)
 
-
-
-
 ##### CHS zu LBA umrechnen
 > LBA: Logical Block Addressing<br/>
 
@@ -221,9 +218,63 @@ Beispiel:
 |    s     | Sektornummer                                                         |
 
 
+# ASSEMBLY
+## Loop
+### Link
+https://c9x.me/x86/html/file_module_x86_id_161.html
+## Beschreibung
+um in inder loop laufen zu können müssen wir das CX register mit unsersen zähler laden.<br/>
+Das CX register könnt ihr euch in dem Falle wie ``int i = 0`` vorstellen<br/>
+Dem ``loop``-Befehl könnt ihr nun wieder zu eurem schleifen Anfang springen
 
-Links: 
+## Beispiel
+Schreibt 10 den Buchstaben a in die "Console" 
+> Langsame variante mit dem Stack
+```assembly
+    mov cx, 10       		; läd 10 in das cx register (int i = 10)
+LoopBody:               	; marker für mein schleifen, zum hochspringen
+    ; loop-body mit magic
+    mov al, 'a'
+    mov ah, 0eh
+    int 10h
+    ; end loop-body
+   	loop LoopBody
+```
+wie machen wir nun eine loop in einer loop?<br/>
+Dazu wird der Stack genutzt. 
+```assembly
+    mov cx, 10			; läd 100 in das cx register (int i = 10)
+LoopBigBody:			; marker für die aeuser Schleife 
+	push cx				; bring den wert cx auf den Stack
+						; da wir das register cx doppelt benutzen
+	; loop-body mit magic
+	mov al, 'y'
+    mov ah, 0eh
+    int 10h
+	; end loop-body
+    mov cx, 10       	; läd 10 in das cx register (int i = 10)
+LoopInnerBody:         ; marker für die innere Schleifen
+    ; loop-body mit magic
+    mov al, 'x'
+    mov ah, 0eh
+    int 10h
+    ; end loop-body
+   	loop LoopInnerBody 	; cx -= 1 und pringt zum Marker "LoopLittleBody"
+	pop cx 				; holst sich den gespeicherten wert vom Stack zurück
+	loop LoopBigBody
+```
+> Schnellere variante
+
+Kommt später
+
+# Links: 
 https://de.wikipedia.org/wiki/Master_Boot_Record<br/>
 https://de.wikipedia.org/wiki/Cylinder_Head_Sector<br/>
 https://de.wikipedia.org/wiki/Partitionstabelle<br/>
 https://de.wikipedia.org/wiki/GUID_Partition_Table<br/>
+## video mode
+http://www.wagemakers.be/english/doc/vga</br>
+http://www.monstersoft.com/tutorial1/VESA_intro.html<br>
+## videos
+https://www.youtube.com/watch?v=jS5vTJRfmnI - loop<br>
+
