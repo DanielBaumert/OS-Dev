@@ -238,30 +238,30 @@ LoopBody:               	; marker für mein schleifen, zum hochspringen
     mov ah, 0eh
     int 10h
     ; end loop-body
-   	loop LoopBody
+    loop LoopBody
 ```
 wie machen wir nun eine loop in einer loop?<br/>
 Dazu wird der Stack genutzt. 
 ```assembly
     mov cx, 10			; läd 100 in das cx register (int i = 10)
 LoopBigBody:			; marker für die aeuser Schleife 
-	push cx				; bring den wert cx auf den Stack
-						; da wir das register cx doppelt benutzen
-	; loop-body mit magic
-	mov al, 'y'
+   push cx			; bring den wert cx auf den Stack
+			        ; da wir das register cx doppelt benutzen
+    ; loop-body mit magic
+    mov al, 'y'
     mov ah, 0eh
     int 10h
-	; end loop-body
-    mov cx, 10       	; läd 10 in das cx register (int i = 10)
-LoopInnerBody:         ; marker für die innere Schleifen
+    ; end loop-body
+    mov cx, 10       	        ; läd 10 in das cx register (int i = 10)
+LoopInnerBody:                  ; marker für die innere Schleifen
     ; loop-body mit magic
     mov al, 'x'
     mov ah, 0eh
     int 10h
     ; end loop-body
-   	loop LoopInnerBody 	; cx -= 1 und pringt zum Marker "LoopLittleBody"
-	pop cx 				; holst sich den gespeicherten wert vom Stack zurück
-	loop LoopBigBody
+    loop LoopInnerBody 	         ; cx -= 1 und pringt zum Marker "LoopLittleBody"
+    pop cx 		         ; holst sich den gespeicherten wert vom Stack zurück 
+    loop LoopBigBody
 ```
 > Schnellere variante
 
