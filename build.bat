@@ -1,1 +1,0 @@
-Tools\nasm\nasm.exe Bootloader\bootloader.asm -f bin -o Bootloader\bootloader.bin

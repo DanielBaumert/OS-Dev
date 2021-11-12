@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "windows" : { 
+                "command": ".\\Tools\\nasm\\nasm.exe Bootloader\\bootloader.asm -f bin -o Bootloader\\bootloader.bin"
+            }
+        },{
+            "label": "run",
+            "type": "shell",
+            "dependsOn" : [ "build" ],
+            "windows" : { 
+                "command": ".\\Tools\\qemu\\qemu-system-i386.exe -hda Bootloader\\bootloader.bin"
+            }
+        }
+    ]
+}
